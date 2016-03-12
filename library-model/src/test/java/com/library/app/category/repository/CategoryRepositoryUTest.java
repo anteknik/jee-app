@@ -30,7 +30,7 @@ public class CategoryRepositoryUTest {
 
 		categoryRepository = new CategoryRepository();
 		categoryRepository.em = em;
-		
+
 		dBCommandTransactionalExecutor = new DBCommandTransactionalExecutor(em);
 	}
 
@@ -47,11 +47,12 @@ public class CategoryRepositoryUTest {
 		});
 
 		assertThat(categoryAddedId, is(notNullValue()));
+
 		final Category category = categoryRepository.findById(categoryAddedId);
 		assertThat(category, is(notNullValue()));
 		assertThat(category.getName(), is(equalTo(java().getName())));
 	}
-	
+
 	@Test
 	public void findCategoryByIdNotFound() {
 		final Category category = categoryRepository.findById(999L);

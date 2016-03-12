@@ -22,6 +22,7 @@ public class CategoryRepository {
 		}
 		return em.find(Category.class, id);
 	}
+
 	public void update(final Category category) {
 		em.merge(category);
 	}
@@ -53,4 +54,5 @@ public class CategoryRepository {
 				.setMaxResults(1)
 				.getResultList().size() > 0;
 	}
+
 }

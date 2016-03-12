@@ -28,7 +28,7 @@ public class Category implements Serializable {
 	public Category() {
 	}
 
-	public Category(String name) {
+	public Category(final String name) {
 		this.name = name;
 	}
 
@@ -36,7 +36,7 @@ public class Category implements Serializable {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(final Long id) {
 		this.id = id;
 	}
 
@@ -44,7 +44,7 @@ public class Category implements Serializable {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -58,14 +58,14 @@ public class Category implements Serializable {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(final Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Category other = (Category) obj;
+		final Category other = (Category) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
