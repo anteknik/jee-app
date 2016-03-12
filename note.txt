@@ -1,0 +1,8 @@
+reporting
+----------
+
+mvn <lifecycle> cobertura:cobertura
+
+Profiles
+---------
+mvn <lifecycle> -PintegrationTests-wildfly
